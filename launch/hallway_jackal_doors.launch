@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+  <arg name="world_name" default="$(find gazebo_ros)/worlds/empty_world.world" />
+
+  <!-- Short-term hack to support the original front_laser:=true argument for spawning
+       the simulator. This will be removed in favour of using the config:=x arg instead. -->
+  <arg name="front_laser" default="false" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" />
+  <!-- end of hack -->
+
+  <!-- Configuration of Jackal which you would like to simulate.
+       See jackal_description for details. -->
+  <arg name="config" default="$(arg default_config)" />
+
+  <!-- Optionally enable teleop for the simulation -->
+  <!-- <arg name="joystick" default="false" /> -->
+
+  <!-- Launch Gazebo with the specified world -->
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find unitartu_tech_gazebo)/world/Hallway_test.world"/> 
+    <arg name="debug" value="0" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <!-- <arg name="world_name" value="$(arg world_name)" /> -->
+  </include>
+
+  <!-- Spawn Jackal -->
+  <include file="$(find jackal_gazebo)/launch/spawn_jackal.launch">
+    <arg name="x" value="-7" />
+    <arg name="y" value="-2" />
+    <arg name="z" value="1.0" />
+    <arg name="yaw" value="0" />
+    <arg name="config" value="$(arg config)" />
+    <!-- <arg name="joystick" value="$(arg joystick)" /> -->
+  </include>
+    <!-- Model Dynamic Manager -->
+  <arg name="add_group_srv" value="/model_dynamics_manager/add_control_group"/>
+  <node pkg="dynamic_gazebo_models" type="dynamics_manager" name="dynamics_manager" output="screen"/>
+
+    <!-- My Doors-->
+  <!-- 1 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door1" args="-sdf -param spawn_UT_door -model door_1 -x -5.901760 -y 25.354313 -z 0" respawn="false" output="screen"/>
+  <!-- 2 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door2" args="-sdf -param spawn_UT_door -model door_2 -x -5.901760 -y 20.721661 -z 0" respawn="false" output="screen"/>
+  <!-- 3 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door3" args="-sdf -param spawn_UT_door -model door_3 -x -5.901760 -y 15.761647 -z 0" respawn="false" output="screen"/>
+  <!-- 4 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door4" args="-sdf -param spawn_UT_door -model door_4 -x -5.901760 -y 10.966283 -z 0" respawn="false" output="screen"/>
+  <!-- 5 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door5" args="-sdf -param spawn_UT_door -model door_5 -x -6.483950 -y 7.581630 -z 0" respawn="false" output="screen"/>
+  <!-- 6 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door6" args="-sdf -param spawn_UT_door -model door_6 -x -6.483950 -y -5.629887 -z 0" respawn="false" output="screen"/>
+    <!-- 7 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door7" args="-sdf -param spawn_UT_door -model door_7 -x -5.907940 -y -7.624002 -z 0" respawn="false" output="screen"/>
+  <!-- 8 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door8" args="-sdf -param spawn_UT_door -model door_8 -x -6.483950 -y -11.940977 -z 0" respawn="false" output="screen"/>
+      <!-- 9 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door9" args="-sdf -param spawn_UT_door -model door_9 -x -5.907940 -y -13.920471 -z 0" respawn="false" output="screen"/>
+  <!-- 10 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door10" args="-sdf -param spawn_UT_door -model door_10 -x -6.575577 -y -18.420753 -z 0" respawn="false" output="screen"/>
+    <!-- 11 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door11" args="-sdf -param spawn_UT_door -model door_11 -x -5.907940  -y -21.561262 -z 0" respawn="false" output="screen"/>
+  <!-- 12 -->
+  <param name="spawn_UT_door" command="$(find xacro)/xacro $(find unitartu_tech_gazebo)/models/Door/model.sdf" />
+  <node pkg="gazebo_ros" type="spawn_model" name="gazebo_door12" args="-sdf -param spawn_UT_door -model door_12 -x -6.575577 -y -24.307316 -z 0" respawn="false" output="screen"/>
+
+
+
+</launch>

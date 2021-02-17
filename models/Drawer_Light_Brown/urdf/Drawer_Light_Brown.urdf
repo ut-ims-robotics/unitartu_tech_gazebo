@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Drawer_Light_Brown">
+  <link
+    name="Drawer_Light_Brown">
+    <inertial>
+      <origin
+        xyz="-1.5688E-18 -0.00854399999999998 0.2875"
+        rpy="0 0 0" />
+      <mass
+        value="45" />
+      <inertia
+        ixx="8.159"
+        ixy="1.9709E-17"
+        ixz="-7.5566E-17"
+        iyy="6.0744"
+        iyz="-8.48789999999855E-05"
+        izz="6.3113" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Drawer_Light_Brown/meshes/Drawer_Light_Brown.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://Drawer_Light_Brown/textures/" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Drawer_Light_Brown/meshes/Drawer_Light_Brown.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

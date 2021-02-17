@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <model name='Robotics_room'>
+    <link name='Robotics_room'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.003105 -0.062225 1.2969 0 -0 0</pose>
+        <mass>15710</mass>
+        <inertia>
+          <ixx>122580</ixx>
+          <ixy>2047.8</ixy>
+          <ixz>-4128</ixz>
+          <iyy>111680</iyy>
+          <iyz>-272.43</iyz>
+          <izz>212140</izz>
+        </inertia>
+      </inertial>
+      <collision name='Robotics_room_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Robotics_room/meshes/Robotics_room.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Robotics_room_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Robotics_room/meshes/Robotics_room.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Room_to_world" type="fixed">
+      <parent>world</parent>
+      <child>Robotics_room</child>
+      <origin xyz="0 0 0" rpy="0 0 ${radians(90)}" />
+    </joint>
+  </model>
+</sdf>

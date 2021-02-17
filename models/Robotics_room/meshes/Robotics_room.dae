@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.90.1 commit date:2020-09-23, commit time:06:43, hash:3e85bb34d0d7</authoring_tool>
+    </contributor>
+    <created>2020-12-01T22:04:52</created>
+    <modified>2020-12-01T22:04:52</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Light-light" name="Light">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <soft sid="soft" type="float">3</soft>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_effects>
+    <effect id="Robotics_room-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.1621417 0.9430347 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Robotics_room-material" name="Robotics_room">
+      <instance_effect url="#Robotics_room-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Robotics_room-mesh" name="Robotics_room">
+      <mesh>
+        <source id="Robotics_room-mesh-positions">
+          <float_array id="Robotics_room-mesh-positions-array" count="240">-0.003561973 -10e-6 -0.002578496 -0.003561973 -10e-6 -9.845e-4 -0.003561973 -10e-6 0.001021444 -0.003561973 -10e-6 0.002615451 -0.003561973 8.95e-4 -0.002498447 -0.003561973 8.95e-4 -0.001064479 -0.003561973 8.95e-4 0.001101493 -0.003561973 8.95e-4 0.002535462 -0.003561973 0.00249499 -0.002498447 -0.003561973 0.00249499 -0.001064479 -0.003561973 0.00249499 0.001101493 -0.003561973 0.00249499 0.002535462 -0.003561973 0.002744972 -0.002578496 -0.003561973 0.002744972 -9.845e-4 -0.003561973 0.002744972 0.001021444 -0.003561973 0.002744972 0.002615451 -0.002904951 -10e-6 -0.003703474 -0.002904951 -10e-6 -0.002578496 -0.002904951 -10e-6 -9.845e-4 -0.002904951 -10e-6 0.001021444 -0.002904951 -10e-6 0.002615451 -0.002904951 -10e-6 0.003703474 -0.002904951 0.002744972 -0.003703474 -0.002904951 0.002744972 -0.002578496 -0.002904951 0.002744972 -9.845e-4 -0.002904951 0.002744972 0.001021444 -0.002904951 0.002744972 0.002615451 -0.002904951 0.002744972 0.003703474 -0.002754986 -10e-6 -0.00355345 -0.002754986 -10e-6 0.00355345 -0.002754986 8.95e-4 -0.002498447 -0.002754986 8.95e-4 -0.001064479 -0.002754986 8.95e-4 0.001101493 -0.002754986 8.95e-4 0.002535462 -0.002754986 0.00249499 -0.002498447 -0.002754986 0.00249499 -0.001064479 -0.002754986 0.00249499 0.001101493 -0.002754986 0.00249499 0.002535462 -0.002754986 0.002744972 -0.00355345 -0.002754986 0.002744972 0.00355345 0.001954972 -10e-6 -2.585e-4 0.001954972 -10e-6 3.515e-4 0.001954972 0.002744972 -2.585e-4 0.001954972 0.002744972 3.515e-4 0.001966953 -10e-6 -0.00355345 0.001966953 -10e-6 -0.003308475 0.001966953 0.002744972 -0.00355345 0.001966953 0.002744972 -0.003308475 0.001993 -10e-6 0.003298461 0.001993 -10e-6 0.00355345 0.001993 0.002744972 0.003298461 0.001993 0.002744972 0.00355345 0.002314984 -10e-6 0.002838492 0.002314984 -10e-6 0.003298461 0.002314984 0.002744972 0.002838492 0.002314984 0.002744972 0.003298461 0.002354979 -10e-6 -5.535e-4 0.002354979 -10e-6 -2.585e-4 0.002354979 0.002744972 -5.535e-4 0.002354979 0.002744972 -2.585e-4 0.002754986 -10e-6 -0.003308475 0.002754986 -10e-6 -5.535e-4 0.002754986 -10e-6 3.515e-4 0.002754986 -10e-6 0.001659452 0.002754986 -10e-6 0.002688467 0.002754986 -10e-6 0.002838492 0.002754986 0.002109944 0.001659452 0.002754986 0.002109944 0.002688467 0.002754986 0.002744972 -0.003308475 0.002754986 0.002744972 -5.535e-4 0.002754986 0.002744972 3.515e-4 0.002754986 0.002744972 0.002838492 0.002904951 -10e-6 -0.003703474 0.002904951 -10e-6 0.001659452 0.002904951 -10e-6 0.002688467 0.002904951 -10e-6 0.003703474 0.002904951 0.002109944 0.001659452 0.002904951 0.002109944 0.002688467 0.002904951 0.002744972 -0.003703474 0.002904951 0.002744972 0.003703474</float_array>
+          <technique_common>
+            <accessor source="#Robotics_room-mesh-positions-array" count="80" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Robotics_room-mesh-normals">
+          <float_array id="Robotics_room-mesh-normals-array" count="81">-1 0 0 -1 -1.58559e-7 0 -1 0 0 -1 -1.58559e-7 0 -1 0 0 1 0 0 1 1.02377e-6 0 1 1.26847e-6 0 1 -5.65621e-7 0 1 -1.67958e-6 0 1 -3.50407e-7 0 1 -1.39191e-6 0 1 3.86736e-7 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 -3.47978e-7 0 0 0 -1 0 0 1 0 1 0 0 1 -2.16684e-6 0 1 2.08719e-6 0 1 -1.49352e-7 0 1 5.21798e-7 0 1 -2.55404e-6</float_array>
+          <technique_common>
+            <accessor source="#Robotics_room-mesh-normals-array" count="27" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Robotics_room-mesh-vertices">
+          <input semantic="POSITION" source="#Robotics_room-mesh-positions"/>
+        </vertices>
+        <triangles material="Robotics_room-material" count="168">
+          <input semantic="VERTEX" source="#Robotics_room-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Robotics_room-mesh-normals" offset="1"/>
+          <p>7 0 15 0 11 0 10 1 11 1 15 1 14 0 10 0 15 0 6 0 10 0 14 0 2 0 6 0 14 0 7 2 6 2 2 2 3 0 7 0 2 0 15 0 7 0 3 0 5 0 13 0 9 0 8 3 9 3 13 3 12 0 8 0 13 0 4 0 8 0 12 0 0 0 4 0 12 0 5 4 4 4 0 4 1 0 5 0 0 0 13 0 5 0 1 0 29 5 32 5 33 5 39 6 36 6 38 6 39 5 29 5 33 5 37 5 39 5 33 5 36 7 39 7 37 7 32 8 29 8 28 8 31 5 32 5 28 5 36 5 32 5 31 5 35 5 36 5 31 5 38 9 36 9 35 9 34 5 38 5 35 5 28 5 38 5 34 5 30 5 28 5 34 5 31 10 28 10 30 10 72 5 76 5 73 5 74 5 79 5 75 5 79 5 74 5 77 5 76 11 79 11 77 11 78 12 79 12 76 12 72 5 78 5 76 5 65 13 64 13 74 13 75 13 65 13 74 13 21 14 49 14 75 14 20 13 3 13 2 13 19 13 20 13 2 13 29 15 49 15 21 15 20 13 29 13 21 13 28 13 29 13 20 13 19 13 28 13 20 13 18 13 28 13 19 13 53 13 52 13 65 13 75 13 53 13 65 13 48 16 53 16 75 16 49 13 48 13 75 13 62 13 72 13 73 13 63 13 62 13 73 13 62 13 41 13 40 13 57 13 62 13 40 13 61 13 60 13 72 13 62 13 61 13 72 13 56 13 61 13 62 13 57 13 56 13 62 13 72 13 60 13 45 13 44 13 72 13 45 13 16 17 72 17 44 17 28 13 16 13 44 13 17 13 16 13 28 13 18 13 17 13 28 13 0 13 17 13 18 13 1 13 0 13 18 13 67 0 64 0 65 0 71 0 67 0 65 0 66 18 67 18 71 18 70 0 66 0 71 0 63 0 66 0 70 0 62 0 63 0 70 0 23 0 22 0 16 0 17 0 23 0 16 0 22 19 78 19 72 19 16 19 22 19 72 19 79 20 27 20 21 20 75 20 79 20 21 20 27 0 26 0 20 0 21 0 27 0 20 0 26 20 15 20 3 20 20 20 26 20 3 20 14 19 25 19 19 19 2 19 14 19 19 19 25 0 24 0 18 0 19 0 25 0 18 0 24 20 13 20 1 20 18 20 24 20 1 20 12 19 23 19 17 19 0 19 12 19 17 19 46 20 38 20 28 20 44 20 46 20 28 20 47 0 46 0 44 0 45 0 47 0 44 0 68 20 47 20 45 20 60 20 68 20 45 20 69 0 68 0 60 0 61 0 69 0 60 0 58 19 69 19 61 19 56 19 58 19 61 19 59 0 58 0 56 0 57 0 59 0 56 0 42 19 59 19 57 19 40 19 42 19 57 19 43 0 42 0 40 0 41 0 43 0 40 0 70 20 43 20 41 20 62 20 70 20 41 20 54 19 71 19 65 19 52 19 54 19 65 19 55 0 54 0 52 0 53 0 55 0 52 0 50 19 55 19 53 19 48 19 50 19 53 19 51 0 50 0 48 0 49 0 51 0 48 0 39 19 51 19 49 19 29 19 39 19 49 19 43 21 59 21 42 21 68 21 46 21 47 21 13 21 23 21 12 21 51 21 55 21 50 21 24 21 25 21 39 21 38 21 24 21 39 21 23 21 13 21 24 21 38 21 23 21 24 21 22 21 23 21 38 21 46 22 22 22 38 22 78 23 22 23 46 23 54 24 79 24 71 24 59 21 43 21 70 21 69 21 59 21 70 21 58 21 59 21 69 21 78 21 46 21 68 21 69 21 78 21 68 21 79 21 78 21 69 21 70 21 79 21 69 21 71 21 79 21 70 21 79 21 54 21 55 21 51 21 79 21 55 21 27 25 79 25 51 25 39 26 27 26 51 26 26 21 27 21 39 21 25 21 26 21 39 21 15 21 26 21 25 21 14 21 15 21 25 21 77 19 74 19 64 19 67 19 77 19 64 19 63 20 73 20 76 20 66 20 63 20 76 20 76 13 77 13 67 13 66 13 76 13 67 13 10 20 6 20 32 20 36 20 10 20 32 20 11 13 10 13 36 13 37 13 11 13 36 13 7 19 11 19 37 19 33 19 7 19 37 19 6 21 7 21 33 21 32 21 6 21 33 21 8 20 4 20 30 20 34 20 8 20 30 20 9 13 8 13 34 13 35 13 9 13 34 13 5 19 9 19 35 19 31 19 5 19 35 19 4 21 5 21 31 21 30 21 4 21 31 21</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="node0" name="node0" type="NODE">
+        <matrix sid="transform">1000 0 0 0 0 1000 0 0 0 0 1000 0 0 0 0 1</matrix>
+        <instance_geometry url="#Robotics_room-mesh" name="node0">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Robotics_room-material" target="#Robotics_room-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Light" name="Light" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

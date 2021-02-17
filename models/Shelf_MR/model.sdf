@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='Shelf_MR'>
+    <link name='Shelf_MR'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.398 0.18355 1.0642 0 -0 0</pose>
+        <mass>49.38</mass>
+        <inertia>
+          <ixx>18.905</ixx>
+          <ixy>5.824e-16</ixy>
+          <ixz>1.2904e-14</ixz>
+          <iyy>22.667</iyy>
+          <iyz>0.22359</iyz>
+          <izz>4.9572</izz>
+        </inertia>
+      </inertial>
+      <collision name='Shelf_MR_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Shelf_MR/meshes/Shelf_MR.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Shelf_MR_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Shelf_MR/meshes/Shelf_MR.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='UT_HALL2'>
+    <static>0</static>
+    <link name='UT_HALL2'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-3.8601 -7.9471 2.7308 0 -0 0</pose>
+        <mass>19841</mass>
+        <inertia>
+          <ixx>5.721e+06</ixx>
+          <ixy>847800</ixy>
+          <ixz>7398.7</ixz>
+          <iyy>378450</iyy>
+          <iyz>49770</iyz>
+          <izz>6.081e+06</izz>
+        </inertia>
+      </inertial>
+      <collision name='UT_HALL2_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_HALL2/meshes/UT_HALL2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='UT_HALL2_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_HALL2/meshes/UT_HALL2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='UT_Hallway_fin'>
+    <link name='UT_Hallway_fin'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-3.8601 -1.15 -4.0024 1.57 -0 0</pose>
+        <mass>19841</mass>
+        <inertia>
+          <ixx>5.721e+06</ixx>
+          <ixy>-5.71142e-11</ixy>
+          <ixz>847840</ixz>
+          <iyy>6.0815e+06</iyy>
+          <iyz>-3.47138e-10</iyz>
+          <izz>378020</izz>
+        </inertia>
+      </inertial>
+      <collision name='UT_Hallway_fin_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_Hallway_fin/meshes/UT_Hallway_fin.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='UT_Hallway_fin_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_Hallway_fin/meshes/UT_Hallway_fin.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

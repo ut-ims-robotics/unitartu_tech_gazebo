@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Door_in">
+  <link
+    name="Door_in">
+    <inertial>
+      <origin
+        xyz="0.00057033 -0.0260059999999999 1.025"
+        rpy="0 0 0" />
+      <mass
+        value="33.399" />
+      <inertia
+        ixx="11.685"
+        ixy="7.223E-05"
+        ixz="0.00010293"
+        iyy="14.036"
+        iyz="-2.56780000007145E-05"
+        izz="2.3663" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Door_in/meshes/Door_in.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://Door_in/textures/" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Door_in/meshes/Door_in.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

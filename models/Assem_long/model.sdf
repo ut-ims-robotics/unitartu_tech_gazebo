@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='Assem_long'>
+    <link name='Assem_long'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.055611 0.058011 0.24973 0 -0 0</pose>
+        <mass>191.42</mass>
+        <inertia>
+          <ixx>34.827</ixx>
+          <ixy>8.7757e-16</ixy>
+          <ixz>-2.5068e-15</ixz>
+          <iyy>39.739</iyy>
+          <iyz>0.24573</iyz>
+          <izz>23.642</izz>
+        </inertia>
+      </inertial>
+      <collision name='Assem_long_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Assem_long/meshes/Assem_long.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Assem_long_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Assem_long/meshes/Assem_long.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='Desk_1_FR'>
+    <link name='Desk_1_FR'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.39531 -0.35406 -0.14663 0 -0 0</pose>
+        <mass>61.693</mass>
+        <inertia>
+          <ixx>17.631</ixx>
+          <ixy>12.655</ixy>
+          <ixz>3.0172</ixz>
+          <iyy>31.98</iyy>
+          <iyz>2.8376</iyz>
+          <izz>43.808</izz>
+        </inertia>
+      </inertial>
+      <collision name='Desk_1_FR_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Desk_1_FR/meshes/Desk_1_FR.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Desk_1_FR_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Desk_1_FR/meshes/Desk_1_FR.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

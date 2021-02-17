@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <model name='Table'>
+    <link name='Table'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0 0.40389 0 -0 0</pose>
+        <mass>1464.6</mass>
+        <inertia>
+          <ixx>402.61</ixx>
+          <ixy>3.4365e-14</ixy>
+          <ixz>-1.3974e-14</ixz>
+          <iyy>239.46</iyy>
+          <iyz>2.4428e-14</iyz>
+          <izz>483.74</izz>
+        </inertia>
+      </inertial>
+      <collision name='Table_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Table/meshes/Table_new.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Table_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Table/meshes/Table_new.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

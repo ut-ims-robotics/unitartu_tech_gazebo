@@ -1,0 +1,37 @@
+<sdf version='1.6'>
+  <model name='Drawer_On_Top'>
+    <link name='Drawer_On_Top'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0 -0.007675 0.23518 0 -0 0</pose>
+        <mass>35</mass>
+        <inertia>
+          <ixx>3.9466</ixx>
+          <ixy>1.5446e-16</ixy>
+          <ixz>-1.3928e-16</ixz>
+          <iyy>3.104</iyy>
+          <iyz>0.01977</iyz>
+          <izz>3.4589</izz>
+        </inertia>
+      </inertial>
+      <collision name='Drawer_On_Top_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Drawer_On_Top/meshes/Drawer_On_Top.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Drawer_On_Top_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Drawer_On_Top/meshes/Drawer_On_Top.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

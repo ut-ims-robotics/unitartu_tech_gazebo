@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Drawer_Grey">
+  <link
+    name="Drawer_Grey">
+    <inertial>
+      <origin
+        xyz="3.0326E-17 -0.00881729999999998 0.36545"
+        rpy="0 0 0" />
+      <mass
+        value="61.33" />
+      <inertia
+        ixx="23.603"
+        ixy="-4.1081E-16"
+        ixz="7.0945E-16"
+        iyy="21.701"
+        iyz="0.0267039999999999"
+        izz="19.382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Drawer_Grey/meshes/Drawer_Grey.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://Drawer_Grey/textures/" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Drawer_Grey/meshes/Drawer_Grey.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

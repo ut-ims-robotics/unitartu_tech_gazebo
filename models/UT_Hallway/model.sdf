@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='UT_Hallway'>
+    <link name='UT_Hallway'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-4.1092 -1.38 -2.0568 0 -0 0</pose>
+        <mass>25709</mass>
+        <inertia>
+          <ixx>8.1871e+06</ixx>
+          <ixy>-6.35011e-11</ixy>
+          <ixz>977800</ixz>
+          <iyy>8.6249e+06</iyy>
+          <iyz>-5.11868e-10</iyz>
+          <izz>470450</izz>
+        </inertia>
+      </inertial>
+      <collision name='UT_Hallway_collision'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_Hallway/meshes/UT_Hallway.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='UT_Hallway_visual'>
+        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://UT_Hallway/meshes/UT_Hallway.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
