@@ -1,6 +1,8 @@
 # unitartu_tech_gazebo
 Digital twin of UniTartuTech robotics lab. 
 
+**NB: Ros Melodic was used for development**
+
 ## How to setup
 ### Clone the repository in your catkin workspace. 
 * https://github.com/ut-ims-robotics/unitartu_tech_gazebo.git
@@ -8,7 +10,7 @@ Digital twin of UniTartuTech robotics lab.
 ### Install dependencies
 * Jackal
 > * Simply use code below to install all jackal packages needed for the simulation to work. 
-> * **sudo apt-get install ros-kinetic-jackal-simulator ros-kinetic-jackal-desktop ros-kinetic-jackal-navigation**
+> * **sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation**
 > * OR
 > * https://github.com/jackal/jackal_simulator.git
 > * https://github.com/jackal/jackal.git
