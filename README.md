@@ -1,7 +1,7 @@
 # unitartu_tech_gazebo
 Digital twin of UniTartuTech robotics lab. 
 
-**NB: Ros Melodic was used for development**
+**NB: ROS Melodic was used for development**
 
 ## How to setup
 ### Clone the repository in your catkin workspace. 
