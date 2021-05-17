@@ -34,10 +34,10 @@
         </geometry>
       </visual>
     </link>
-    <joint name="Room_to_world" type="fixed">
+    <!-- <joint name="Room_to_world" type="fixed">
       <parent>world</parent>
       <child>Robotics_room</child>
       <origin xyz="0 0 0" rpy="0 0 ${radians(90)}" />
-    </joint>
+    </joint> -->
   </model>
 </sdf>

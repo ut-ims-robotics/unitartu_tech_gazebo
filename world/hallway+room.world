@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+  <sdf version="1.6">
+    <world name="default">
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- UNITARTU WORLD MODELS BELOW -->
+    <include>
+      <uri>model://ROOM329_Hallway</uri>
+    </include>
+
+    <include>
+      <uri>model://Desk_1_FL</uri>
+    </include>
+    <include>
+      <uri>model://Desk_1_FR</uri>
+    </include>
+    <model name='Desk_1_FR_0'>
+        <include>
+        <uri>model://Desk_1_FR</uri>
+        </include>
+    </model>
+    <include>
+      <uri>model://Table</uri>
+    </include>
+    <include>
+      <uri>model://Assem_long</uri>
+    </include>
+    <include>
+      <uri>model://Desk_2_L</uri>
+    </include>
+    <include>
+      <uri>model://Desk_3_4x</uri>
+    </include>
+    <include>
+      <uri>model://Drawer_Light_Brown</uri>
+    </include>
+    <include>
+      <uri>model://Drawer_On_Top</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_2_FL</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_2_FR</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_FL</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_FR</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_ML</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_MR</uri>
+    </include>
+    <include>
+      <uri>model://xArm7_table_m</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_MR</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_MR</uri>
+    </include>
+    <include>
+      <uri>model://Shelf_MR</uri>
+    </include>
+    <include>
+      <uri>model://Borg_chair</uri>
+    </include>
+    <model name='Borg_chair_0'>
+        <include>
+            <uri>model://Borg_chair</uri>
+        </include>
+    </model>
+    <!-- Current state of world, i.e positions of various models -->
+    <state world_name='default'>
+
+      <model name='Assem_long'>
+        <pose frame=''>-9.68232 26.11548 0.375774 2e-06 5e-06 1.57242</pose>
+      </model>
+
+      <!-- <model name='Desk_1_FL'>
+        <pose frame=''>-1.55216 3.12672 0.717988 -2e-06 2e-06 0.001391</pose>
+      </model> -->
+
+      <model name='Desk_1_FL'>
+        <pose frame=''>-8.86987 31.1445 0.717995 -4e-06 -5e-06 0.001619</pose>
+      </model>
+
+      <model name='Desk_1_FR'>
+        <pose frame=''>-6.671348 31.14402 0.72772 -0.000467 0.009221 0.000708</pose>
+      </model>
+      
+      <model name='Desk_1_FR_0'>
+        <pose frame=''>-8.86451 28.10427 0.718 -4e-06 -0 -3.14108</pose>
+        <link name='Desk_1_FR'>
+          <pose frame=''>-8.86451 28.10427 0.718 -4e-06 -0 -3.14108</pose>
+        </link>
+      </model>
+      
+      <model name='Desk_2_L'>
+        <pose frame=''>-6.77471 24.81181 0.713998 -7e-06 1e-06 1.5717</pose>
+      </model>
+
+      <model name='Desk_3_4x'>
+        <pose frame=''>-7.06973 28.11566 0.717997 -3e-06 -4e-06 0.000371</pose>
+      </model>
+
+      <model name='Drawer_Light_Brown'>
+        <pose frame=''>-9.66749 29.65369 -1.8e-05 -4e-06 -0 1.56767</pose>
+      </model>
+
+      <model name='Drawer_On_Top'>
+        <pose frame=''>-9.66692 29.65299 0.574982 -4e-06 -0 1.56461</pose>
+      </model>
+
+      <model name='Shelf_2_FL'>
+        <pose frame=''>-6.20283 26.35078 -3e-06 -3e-06 -0 -1.56996</pose>
+      </model>
+
+      <model name='Shelf_2_FR'>
+        <pose frame=''>-6.20546 25.54524 0 -5e-06 -0 -1.56863</pose>
+      </model>
+
+      <model name='Shelf_FL'>
+        <pose frame=''>-4.9475 31.04443 -1e-06 -2e-06 -0 -1.56213</pose>
+        <scale>1 1 1</scale>
+      </model>
+
+      <model name='Shelf_FR'>
+        <pose frame=''>-5.33764 28.67251 1e-06 -4e-06 3e-06 -1.57658</pose>
+      </model>
+
+      <model name='Shelf_ML'>
+        <pose frame=''>-4.94224 30.24295 0 -2e-06 1e-06 -1.57067</pose>
+      </model>
+
+      <model name='Shelf_MR'>
+        <pose frame=''>-4.94176 29.44265 0 -4e-06 0 -1.57106</pose>
+      </model>
+
+      <model name='Table'>
+        <pose frame=''>-6.73011 27.91248 -0 -4e-06 -0 -3.13958</pose>
+      </model>
+      
+      <model name='xArm7_table_m'>
+        <pose frame=''>-7.66873 27.29194 0.448579 -1.5708 2e-06 -0.000109</pose>
+      </model>
+
+      <model name='Borg_chair'>
+        <pose frame=''>-9.31379 0.9500 0.8338 0 0 0.7850</pose>
+      </model>
+
+      <model name='Borg_chair_0'>
+        <pose frame=''>-7.1189 0.9500 0.8338 0 0 0.7850</pose>
+        <link name='Borg_chair'>
+          <pose frame=''>-7.1189 0.9500 0.8338 0 0 0.7850</pose>
+        </link>
+      </model>
+      
+    </state>
+
+    </world>
+</sdf>

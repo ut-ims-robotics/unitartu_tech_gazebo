@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='SLAM_Hallway'>
+    <link name='SLAM_Hallway'>
+      <pose frame=''>0 0 1.1929 0 -0 3.142</pose>
+      <inertial>
+        <pose frame=''>-4.1092 -1.38 -2.0568 0 -0 0</pose>
+        <mass>25709</mass>
+        <inertia>
+          <ixx>8.1871e+06</ixx>
+          <ixy>-6.35011e-11</ixy>
+          <ixz>977800</ixz>
+          <iyy>8.6249e+06</iyy>
+          <iyz>-5.11868e-10</iyz>
+          <izz>470450</izz>
+        </inertia>
+      </inertial>
+      <collision name='SLAM_Hallway_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://SLAM_Hallway/meshes/SLAM_Hallway.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='SLAM_Hallway_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://SLAM_Hallway/meshes/SLAM_Hallway.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
