@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur5_table_setup">
+  
+  <!-- Add Table -->
+  <xacro:include filename="$(find unitartu_tech_gazebo)/urdf/table.urdf.xacro"/>
+
+  <!-- adding UR5 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro"/>
+  <xacro:ur5_robot prefix="ur5_" joint_limited="true"/>
+ 
+
+  <link name="world"/>
+  <!-- Joints -->
+  <!-- table to world -->
+   <joint name="table_to_world" type="fixed">
+     <parent link="world"/>
+     <child link="table_link"/>
+     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+
+  <!-- ur5 to table -->
+  <joint name="ur5_to_table" type="fixed">
+    <parent link="table_link"/>
+    <child link="ur5_base_link"/>
+    <origin xyz="-0.405 -0.7 0.79" rpy="0.0 0.0 -0.785"/>
+  </joint>
+  
+</robot>

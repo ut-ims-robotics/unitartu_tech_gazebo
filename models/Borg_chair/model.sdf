@@ -5,7 +5,15 @@
       <pose frame=''>0 0 0 0 -0 0</pose>
       <inertial>
         <pose frame=''>0 -0 0 0 -0 0</pose>
-        <mass>1</mass>
+        <mass>120</mass>
+        <inertia>
+          <ixx>0.034824</ixx>
+          <ixy>0.000037</ixy>
+          <ixz>0.005713</ixz>
+          <iyy>0.031029</iyy>
+          <iyz>-0.007295</iyz>
+          <izz>0.008385</izz>
+        </inertia>
       </inertial>
       <collision name='Borg_chair_collision'>
         <pose frame=''>0 0 0 0 -0 0</pose>
@@ -26,5 +34,6 @@
         </geometry>
       </visual>
     </link>
+    <static>1</static>
   </model>
 </sdf>

@@ -5,7 +5,7 @@
     <arg name="x_pos" default="0"/>
     <arg name="model" default="robotont_gazebo_nuc"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(arg world)"/>
+        <arg name="world_name" value="$(find unitartu_tech_gazebo)/world/hallway+room.world"/>
     </include>
     
     <include file="$(find robotont_gazebo)/launch/upload_description.launch">

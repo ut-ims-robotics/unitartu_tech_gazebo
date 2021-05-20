@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="true"  doc="If true, limits joint range [-PI, PI] on all joints." />
+  <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
+  <arg name="ur5" default="true" doc="If true, UR5 robot spawns"/>
+  
+  <!-- User defines specific mobile robot to spawn -->
+  <arg name="mobile_robot" default="turtlebot3" doc=" default is turtlebot3. But user can specify; turtlebot3/robotont/jackal"/> 
+
+<!-- Jackal's presets -->
+  <!-- Short-term hack to support the original front_laser:=true argument for spawning
+      the simulator. This will be removed in favour of using the config:=x arg instead. -->
+  <arg name="front_laser" default="false" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" />  -->
+  <!-- end of hack -->
+ <arg name="config" default="$(arg default_config)" />
+<!-- End of jackal presents -->
+
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+  <arg name="world_name" value="$(find unitartu_tech_gazebo)/world/hallway+room.world"/>    
+  <arg name="paused" value="$(arg paused)"/>
+  <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  
+  <!-- Consider UR5 robot -->
+  <group if="$(arg ur5)">
+      <!-- send robot urdf to param server -->
+      <include file="$(find ur_description)/launch/ur5_upload.launch">
+          <arg name="limited" value="$(arg limited)"/>
+      </include>
+
+      <!-- push robot_description to factory and spawn robot in gazebo -->
+      <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model ur5_robot -x -7.12 -y 27.17 -z 0.795 -Y -0.785" respawn="false" output="screen" />
+
+      <include file="$(find ur_gazebo)/launch/controller_utils.launch"/>
+
+      <!-- start this controller -->
+      <rosparam file="$(find ur_gazebo)/controller/arm_controller_ur5.yaml" command="load"/>
+      <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/>
+
+      <!-- load other controllers -->
+      <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load joint_group_position_controller" />
+  </group>
+  
+  <!-- Adding Robotont -->
+  <group ns="robot1" if="$(eval mobile_robot == 'robotont')">
+      <param name="tf_prefix" value="robot1_tf" />
+      <arg name="__ns" default="robot1"/>
+      <arg name="x_pos" default="0"/>
+      <arg name="model" default="robotont_gazebo_nuc"/>
+
+      <include file="$(find robotont_gazebo)/launch/upload_description.launch">
+        <arg name="__ns" value="$(arg __ns)"/>
+        <arg name="model" default="$(arg model)"/>
+      </include>
+
+      <!-- topic for 3d_mapping  -->
+      <node if="$(eval model == 'robotont_gazebo_nuc')" name="relay" type="relay" pkg="topic_tools" args="camera/depth/image_rect_raw camera/aligned_depth_to_color/image_raw" />
+
+      <include file="$(find robotont_gazebo)/launch/spawn_urdf.launch" >
+          <arg name="x_pos" value="$(arg x_pos)" />
+      </include>
+
+      <include file="$(find unitartu_tech_gazebo)/launch/robotont.launch"/>
+  </group>
+
+  <!-- Adding TurtleBot3 -->
+  <group ns="robot2" if="$(eval mobile_robot == 'turtlebot3')">
+    <param name="tf_prefix" value="robot2_tf" />
+    <arg name="model" default="waffle_pi"/> 
+    <arg name="x_pos" default="-8.0"/>
+    <arg name="y_pos" default="29.8"/>
+    <arg name="z_pos" default="0.0"/>
+
+     <param name="robot2_robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" /> 
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot2_robot_description" />     
+  </group> 
+
+  <!-- Adding Jackal -->
+  <group ns="robot3" if="$(eval mobile_robot == 'jackal')">
+    <param name="tf_prefix" value="robot3_tf" />
+    <!-- Load Jackal's description, controllers, and teleop nodes.  -->
+    <include file="$(find jackal_description)/launch/description.launch">
+      <arg name="config" value="$(arg config)" />
+    </include>
+
+    <include file="$(find jackal_control)/launch/control.launch" />
+    <include file="$(find jackal_control)/launch/teleop.launch">
+      <arg name="joystick" value="false"/>
+    </include>
+
+    <!-- Spawn Jackal -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+          args="-urdf -model jackal -x -4.5 -y 0 -z 0.1 -param robot_description" />
+  </group> 
+
+</launch>

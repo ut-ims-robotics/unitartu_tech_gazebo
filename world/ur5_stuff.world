@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+  <sdf version="1.6">
+  <world name="default">
+    <state world_name='default'>
+      <model name='robot'>
+        <pose frame=''>-0 0 0.1 -1.2e-05 -0.000122 3e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-0 0 0.1 -1.2e-05 -0.000122 3e-06</pose>
+          <velocity>0 0 -0 0 -0 0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='forearm_link'>
+          <pose frame=''>0.319027 0.035017 0.468218 -3.10604 -1.56774 0.124214</pose>
+          <velocity>0.009176 0.001094 -0.010628 -0.005235 0.032488 -0.001184</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='shoulder_link'>
+          <pose frame=''>-1e-05 1e-06 0.189159 -6.2e-05 -0.000228 -2.98182</pose>
+          <velocity>-0 0 0 0 0 -0.001189</velocity>
+          <acceleration>-0 0 -0 0 -0 0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='upper_arm_link'>
+          <pose frame=''>0.021605 -0.134119 0.189142 -0.000189 -0.85445 -2.98168</pose>
+          <velocity>-0.000159 -2.6e-05 0 -0.005275 0.032734 -0.001184</velocity>
+          <acceleration>-0 -0 0 0.000101 1.7e-05 0.000138</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='wrist_1_link'>
+          <pose frame=''>0.706281 0.097417 0.467011 -0.000126 -0.000462 -2.98183</pose>
+          <velocity>0.009211 0.000629 -0.023536 -0.005515 0.034223 -0.001184</velocity>
+          <acceleration>0 0 -0 -6e-06 -1e-06 0</acceleration>
+          <wrench>0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='wrist_2_link'>
+          <pose frame=''>0.721076 0.005602 0.466998 4.5e-05 0.00048 -0.000507</pose>
+          <velocity>0.009102 0.000612 -0.023536 -0.005515 0.034223 -0.001121</velocity>
+          <acceleration>0 0 0 -6e-06 -1e-06 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='wrist_3_link'>
+          <pose frame=''>0.721122 0.005597 0.561644 3.14153 -0.014132 3.14108</pose>
+          <velocity>0.012341 0.001134 -0.023537 -0.005515 0.034337 -0.001121</velocity>
+          <acceleration>0 0 0 -2.2e-05 -0 0.000106</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      
+    </state>
+  </world>
+
+</sdf>
